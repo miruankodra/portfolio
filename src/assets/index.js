@@ -1,4 +1,4 @@
-import reactImg from './react.svg';
+import logo from './mk-logo.svg';
 import menu from './menu.svg';
 import close from './close.svg';
 import helloWorld from './hello-world.gif';
@@ -17,14 +17,17 @@ import ubuntu from './ubuntu.svg';
 import star from './star.svg';
 import outlineStar from './star-outline.svg';
 
-// import microservices from './microservices.svg';
 import microservices from './microservices.jpg';
 import pos from './pos-system.svg';
 import librarySystem from './library-system.jpg';
 
+import instagram from './instagram.svg';
+import github from './github.svg';
+import linkedin from './linkedin.svg';
+
 
 export {
-    reactImg,
+    logo,
     menu,
     close,
     helloWorld,
@@ -42,5 +45,8 @@ export {
     outlineStar,
     microservices,
     pos,
-    librarySystem
+    librarySystem,
+    instagram,
+    github,
+    linkedin
 };

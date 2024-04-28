@@ -1,14 +1,14 @@
-import {reactImg} from "../assets/index.js";
-const Footer = () => (
-    <section id="footer" className={'w-full flex flex-col items-start border-white border-2 mt-10 p-3'}>
-        <div className={'w-full flex flex-row items-center justify-start'}>
-            <img src={reactImg} alt="Miruan Kodra" className={'w-[128px] h-[128px] mr-5'} />
-            <div className={`h-full flex-col items-start justify-around`}>
-                <h1 className={`text-[20px] text-start font-semibold `}>Miruan Kodra</h1>
-                <p className={`text-[18px] text-start font-normal `}>Full Stack Developer</p>
-            </div>
-        </div>
-        <div></div>
-    </section>
-);
+const Footer = () => {
+
+    const currentYear = new Date().getFullYear();
+
+   return (
+       <section id="footer" className={`w-full border-t-[1px] border-dimWhite py-5 px-3 text-start flex flex-col items-start justify-between`}>
+            <p className={`mb-3 text-[16px] font-bold`}>&copy; {currentYear} Miruan Kodra. All rights reserved. </p>
+            <p className={`text-[14px] text-dimWhite font-semibold`}>
+                Crafted in React, detailed in Tailwind, with great care form the artisan!
+            </p>
+        </section>
+   )
+};
 export default Footer;

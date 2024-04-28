@@ -1,5 +1,11 @@
-const PortfolioCard = ({description, techs, title, cover}) => (
-        <div className={`md:w-[32%] w-full h-[200px] flex flex-row items-center justify-between rounded-[15px] bg-dimBlue`}>
+const PortfolioCard = ({description, techs, title, cover, link}) => {
+
+    const navigateToLink = () => {
+        window.open(link);
+    }
+
+    return (
+        <div className={`md:w-[32%] w-full h-[200px] flex flex-row items-center justify-between rounded-[15px] bg-dimBlue cursor-pointer`} onClick={ () => navigateToLink() }>
             <div className={`w-1/3 h-full rounded-l-[15px]`}>
                 <img src={cover} alt={title} className="w-full h-full object-cover rounded-l-[15px]"/>
             </div>
@@ -15,6 +21,7 @@ const PortfolioCard = ({description, techs, title, cover}) => (
                 </div>
             </div>
         </div>
-);
+    )
+};
 
 export default PortfolioCard;

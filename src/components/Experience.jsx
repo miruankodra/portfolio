@@ -2,9 +2,9 @@ import { workExp, education } from "../constants/index.js";
 
 const Experience = () => {
     return (
-        <section id="experience" className="w-full flex md:flex-row flex-col items-start justify-around mt-20 md:px-20 px-5">
-            <div className={`md:1/2 w-full flex flex-col items-start`}>
-                <h1 className={'heading1 mb-5 text-start'}>Work Experience</h1>
+        <section id="experience" className="w-full flex md:flex-row flex-col items-start justify-around mt-20 px-5">
+            <div className={`md:1/2 w-full flex flex-col items-start md:mb-0 mb-10`}>
+                <h1 className={'heading1'}>Work Experience</h1>
                 <ul className={'list-disc'}>
                     {
                         workExp.map((experience, index) => (
@@ -26,7 +26,7 @@ const Experience = () => {
                 </ul>
             </div>
             <div className={`md:1/2 w-full flex flex-col items-start`}>
-                <h1 className={'heading1 mb-5'}>Education</h1>
+                <h1 className={'heading1'}>Education</h1>
                 <ul className={`list-disc`}>
                     {
                         education.map((edu, index) => (

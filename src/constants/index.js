@@ -1,4 +1,4 @@
-import { javascript, php, html, css, angular, laravel, nodejs, ionic, mysql, ubuntu, microservices, pos, librarySystem } from '../assets/index.js'
+import { javascript, php, html, css, angular, laravel, nodejs, ionic, mysql, ubuntu, microservices, pos, librarySystem, instagram, github, linkedin } from '../assets/index.js'
 
 export const skills = [
     {
@@ -137,4 +137,33 @@ export const projects = [
         githubLink:'https://github.com/miruankodra/Library-System-FE',
         icons: [angular, laravel],
     },
+];
+
+export const contacts = [
+    {
+        type: 'Mobile',
+        value: '+355 67 578 9678'
+    },
+    {
+        type: 'Email',
+        value: 'miruankodra@gmail.com',
+    }
+];
+
+export const socials = [
+    {
+        name: 'Instagram',
+        link: 'https://www.instagram.com/miruankodra',
+        icon: instagram
+    },
+    {
+        name: 'Github',
+        link: 'https://github.com/miruankodra',
+        icon: github
+    },
+    {
+        name: 'LinkedIn',
+        link: 'www.linkedin.com/in/miruan-kodra-26072003m',
+        icon: linkedin
+    }
 ];

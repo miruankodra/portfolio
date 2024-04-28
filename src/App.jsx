@@ -4,17 +4,17 @@ import { Nav, Hero, About, Experience , Portfolio, Contact, Footer } from "./com
 function App() {
   return (
     <div className={`w-full overflow-hidden bg-primary flex flex-col items-center`}>
-        <div className={`w-full md:mb-10 mb-20`}>
+        <div className={`w-full md:mb-10 mb-36`}>
             <Nav/>
         </div>
-        <div className={`w-full`}>
+        <div className={`w-full flex flex-col items-start justify-between md:px-10 px-5`}>
             <Hero/>
             <About/>
             <Experience/>
             <Portfolio/>
-            <Contact/>
-            <Footer/>
         </div>
+        <Contact/>
+        <Footer/>
 
     </div>
 
