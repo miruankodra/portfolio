@@ -2,6 +2,8 @@ import logo from './mk-logo.svg';
 import menu from './menu.svg';
 import close from './close.svg';
 import helloWorld from './hello-world.gif';
+import chevron from './chevron.svg';
+import profile from './profile.jpg';
 
 import javascript from './javascript.svg';
 import php from './php.svg';
@@ -13,6 +15,12 @@ import nodejs from './nodejs.svg';
 import ionic from './ionic.svg';
 import mysql from './mysql.svg';
 import ubuntu from './ubuntu.svg';
+import typescript from './typescript.png'
+import nestjs from './nestjs.svg';
+import capacitor from './capacitor-js.svg';
+import cog from './cog.svg';
+import bulb from './bulb.svg';
+import scalable from './trending-up.svg';
 
 import star from './star.svg';
 import outlineStar from './star-outline.svg';
@@ -48,5 +56,13 @@ export {
     librarySystem,
     instagram,
     github,
-    linkedin
+    linkedin,
+    chevron,
+    profile,
+    typescript,
+    nestjs,
+    capacitor,
+    cog,
+    bulb,
+    scalable
 };

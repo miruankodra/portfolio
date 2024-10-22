@@ -1,22 +1,23 @@
-import {logo, menu, close} from "../assets/index.js";
+import {menu, close} from "../assets/index.js";
 import {useState} from "react";
 const Nav = () => {
     const [ isMenuCollapsed, toggleMenu ] = useState(true);
     return (
-        <section id="nav" className={`absolute top-0 left-0 w-full flex flex-row items-center justify-between pt-10 px-5`}>
+        <section id="nav" className={`absolute top-0 left-0 w-full flex flex-row items-center justify-between pt-10 md:px-20 px-10`}>
             <div className={'md:w-1/4 w-auto flex items-baseline justify-start'}>
-                <img src={logo} alt="Miruan Kodra" className={`w-[64px] h-[64px]`}/>
-                <h1 className={'text-[40px] text-dimWhite font-semibold'}>Kodra</h1>
+                {/* <img src={logo} alt="Miruan Kodra" className={`w-[64px] h-[64px]`}/> */}
+                <h1 className={'sm:block hidden text-[40px] text-dimWhite font-extrabold'}><span className="text-[40px] text-white font-extrabold">miruan</span>kodra.</h1>
+                <h1 className={'sm:hidden block text-[40px] text-dimWhite font-extrabold'}><span className="text-[40px] text-white font-extrabold">m</span>k.</h1>
             </div>
-            <div className={'md:w-2/4 w-auto'}>
-                <ul className={`md:flex hidden flex-row items-center justify-center text-[18px]`}>
-                    <li className={`mr-10`}>
+            <div className={'w-auto'}>
+                <ul className={`h-[64px] relative z-50 px-10 *:!font-bold md:flex hidden flex-row items-center justify-center text-[18px] bg-indigo-600 rounded-2xl`}>
+                    <li className={`mr-10 cursor-pointer`}>
                         <a href="#about">About</a>
                     </li>
-                    <li className={`mr-10`}>
+                    <li className={`mr-10 cursor-pointer`}>
                         <a href="#portfolio">Portfolio</a>
                     </li>
-                    <li className={`mr-0`}>
+                    <li className={`mr-0 cursor-pointer`}>
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -38,7 +39,6 @@ const Nav = () => {
                     </ul>
                 </div>
             </div>
-            <div className={`md:block hidden w-1/4`}></div>
         </section>
     );
 }
