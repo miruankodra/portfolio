@@ -1,4 +1,3 @@
-import logo from './mk-logo.svg';
 import menu from './menu.svg';
 import close from './close.svg';
 import helloWorld from './hello-world.gif';
@@ -33,9 +32,19 @@ import instagram from './instagram.svg';
 import github from './github.svg';
 import linkedin from './linkedin.svg';
 
+import powerpeak from './powerpeak.png';
+import evauto from './evauto.svg';
+
+import mail from './mail.svg';
+import call from './call.svg';
+
+import robofarm from './robofarm.jpg';
+import robohand from './robot-hand.png';
+
+
+
 
 export {
-    logo,
     menu,
     close,
     helloWorld,
@@ -64,5 +73,11 @@ export {
     capacitor,
     cog,
     bulb,
-    scalable
+    scalable,
+    powerpeak,
+    evauto,
+    mail,
+    call,
+    robofarm,
+    robohand
 };

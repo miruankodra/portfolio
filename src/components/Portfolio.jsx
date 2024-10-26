@@ -1,120 +1,156 @@
+import React, { useState } from "react";
+
 const Portfolio = () => {
-    return (
-        <section id="portfolio" className={'w-full flex flex-col items-center mt-20'}>
-            <section className="text-white">
-                <div className="mx-auto w-full px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 flex flex-col items-center justify-center">
-                    <div className="mx-auto max-w-lg text-center">
-                        <h2 className="text-3xl font-bold sm:text-4xl">Selected Projects</h2>
+  const [showCard, setShowCard] = useState("all");
 
-                        <p className="mt-4 text-gray-300">
-                            Crafted with Purpose and Precision: Projects That Tell a Story
-                        </p>
-                    </div>
+  const handleProject = (category) => {
+    setShowCard(category);
+  };
 
-                    <div className="w-4/5 mt-8 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-                        <a href="#" className="block rounded-lg p-4 shadow-sm shadow-indigo-100">
-                            <img
-                                alt=""
-                                src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                                className="h-56 w-full rounded-md object-cover" />
+  return (
+    <>
+      <section id="portfolio" className="w-full pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] dark:bg-dark">
+        <div className="container mx-auto">
+          <div className="flex flex-wrap -mx-4">
+            <div className="w-full px-4">
+              <div className="mx-auto mb-[60px] max-w-[510px] text-center">
+                <span className="text-indigo-600 mb-2 block text-lg font-semibold">
+                  Portfolio
+                </span>
+                <h2 className="text-dark mb-3 text-3xl leading-[1.208] font-bold sm:text-4xl md:text-[40px]">
+                  My Recent Projects
+                </h2>
+                <p className="text-body-color text-base dark:text-dark-6">
+                     Explore My Latest Work: Crafting Tailored Solutions for Real-World Challenges
+                </p>
+              </div>
+            </div>
+          </div>
 
-                            <div className="mt-2">
-                                <dl>
-                                    <div>
-                                        <dt className="sr-only">Price</dt>
+          {/* <div className="w-full flex flex-wrap justify-center -mx-4">
+            <div className="w-full px-4">
+              <ul className="flex flex-wrap justify-center mb-12 space-x-1">
+                <li className="mb-1">
+                  <button
+                    onClick={() => handleProject("all")}
+                    className={`inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 ${
+                      showCard === "all"
+                        ? "activeClasses bg-primary text-white"
+                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-white"
+                    }`}
+                  >
+                    All Projects
+                  </button>
+                </li>
+                <li className="mb-1">
+                  <button
+                    onClick={() => handleProject("branding")}
+                    className={`inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 ${
+                      showCard === "branding"
+                        ? "activeClasses bg-primary text-white"
+                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-white"
+                    }`}
+                  >
+                    Branding
+                  </button>
+                </li>
+                <li className="mb-1">
+                  <button
+                    onClick={() => handleProject("design")}
+                    className={`inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 ${
+                      showCard === "design"
+                        ? "activeClasses bg-primary text-white"
+                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-white"
+                    }`}
+                  >
+                    Design
+                  </button>
+                </li>
+                
+                <li className="mb-1">
+                  <button
+                    onClick={() => handleProject("development")}
+                    className={`inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 ${
+                      showCard === "development"
+                        ? "activeClasses bg-primary text-white"
+                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-white"
+                    }`}
+                  >
+                    Development
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div> */}
+          <div className="flex flex-wrap -mx-4">
+            <PortfolioCard
+              ImageHref="https://i.ibb.co/3FKqS1G/image-03.jpg"
+              category="Development"
+              title="Creative Agency"
+              button="View Details"
+              buttonHref="#"
+              showCard={showCard}
+            />
+            <PortfolioCard
+              ImageHref="https://i.ibb.co/m6dq2fX/image-04.jpg"
+              category="Design"
+              title="Creative Agency"
+              button="View Details"
+              buttonHref="#"
+              showCard={showCard}
+            />
+            <PortfolioCard
+              ImageHref="https://i.ibb.co/mCPjBsH/image-05.jpg"
+              category="Marketing"
+              title="Creative Agency"
+              button="View Details"
+              buttonHref="#"
+              showCard={showCard}
+            />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
 
-                                        <dd className="text-sm text-gray-500">$240,000</dd>
-                                    </div>
+export default Portfolio;
 
-                                    <div>
-                                        <dt className="sr-only">Address</dt>
-
-                                        <dd className="font-medium">123 Wallaby Avenue, Park Road</dd>
-                                    </div>
-                                </dl>
-
-                                <div className="mt-6 flex items-center gap-8 text-xs">
-                                    <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                        <svg
-                                            className="size-4 text-indigo-700"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-                                        </svg>
-
-                                        <div className="mt-1.5 sm:mt-0">
-                                            <p className="text-gray-500">Parking</p>
-
-                                            <p className="font-medium">2 spaces</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                        <svg
-                                            className="size-4 text-indigo-700"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                                        </svg>
-
-                                        <div className="mt-1.5 sm:mt-0">
-                                            <p className="text-gray-500">Bathroom</p>
-
-                                            <p className="font-medium">2 rooms</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                        <svg
-                                            className="size-4 text-indigo-700"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                                        </svg>
-
-                                        <div className="mt-1.5 sm:mt-0">
-                                            <p className="text-gray-500">Bedroom</p>
-
-                                            <p className="font-medium">4 rooms</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    {/* <div className="mt-12 text-center">
-                <a
-                    href="#"
-                    className="inline-block rounded-2xl bg-pink-600 px-12 py-3 text-lg font-medium text-white transition hover:bg-indigo-700 focus:outline-none"
-                >
-                    Have a project in mind ?
-                </a>
-            </div> */}
-                </div>
-            </section>
-        </section>
-    )
-}
-export default Portfolio
+const PortfolioCard = ({
+  showCard,
+  category,
+  ImageHref,
+  title,
+  button,
+  buttonHref,
+}) => {
+  return (
+    <>
+      <div
+        className={`w-full px-4 md:w-1/2 xl:w-1/3 ${
+          showCard === "all" || showCard === category.toLowerCase()
+            ? "block"
+            : "hidden"
+        }`}
+      >
+        <div className="relative mb-12">
+          <div className="overflow-hidden rounded-[20px]">
+            <img src={ImageHref} alt="portfolio" className="w-full" />
+          </div>
+          <div className="relative z-10 mx-7 -mt-20 rounded-lg bg-gray-900 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark">
+            <span className="text-indigo-600 mb-2 block text-sm font-medium">
+              {category}
+            </span>
+            <h3 className="text-dark dark:text-white mb-5 text-xl font-bold">{title}</h3>
+            <a
+              href={buttonHref}
+              className="text-body-color dark:text-dark-6 hover:border-primary hover:bg-primary inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
+            >
+              {button}
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
