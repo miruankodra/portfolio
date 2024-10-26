@@ -4,14 +4,14 @@ import { Nav, Hero, About, Clients, Portfolio, Contact, Footer } from "./compone
 function App() {
   return (
     <div className={`w-full overflow-hidden bg-primary flex flex-col items-center`}>
-        <div className={`w-full`}>
+        <div className={`w-full z-50`}>
             <Nav/>
         </div>
         <div className={`w-full flex flex-col items-start justify-between px-5`}>
             <Hero/>
             <About/>
             <Clients/>
-            <Portfolio/>
+            {/* <Portfolio/> */}
         </div>
         <Contact/>
         <Footer/>

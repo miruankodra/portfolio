@@ -28,7 +28,7 @@ const Hero = () => (
                     products.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6 *:text-left">
-                    <a href="#portfolio" className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Portfolio</a>
+                    {/* <a href="#portfolio" className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Portfolio</a> */}
                     <a href="#about" className="transition-all group text-lg font-semibold leading-6 text-gray-400 hover:text-white flex flex-row items-center">More About Me <div className="transition-all group-hover:animate-pushRight"><img src={chevron} alt="About" className="-rotate-90 w-5 ml-2" /></div></a>
                 </div>
             </div>
